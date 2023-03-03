@@ -17,19 +17,23 @@ function selectionsort(&$Array, $n) {
   
  //source: alpha coding skills 
 
-$word=$_GET["word"];
+$sequence=$_GET["sequence"];
 
 $array = [];
 
-for ($i=0; $i < strlen($word); $i++) { 
-   if ($word[$i]!==",") {
-    array_push($array,$word[$i]);
+for ($i=0; $i < strlen($sequence); $i++) { 
+   if ($sequence[$i]!==",") {
+    array_push($array,$sequence[$i]);
    }
 }
 $s= sizeof($array);
 selectionsort($array,$s);
 
 $selected=join(",",$array);
-echo $selected;
+$response=[
+   "result"=> $selected
+]; 
+
+echo json_encode($response);
 
 ?>
