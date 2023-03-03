@@ -15,28 +15,13 @@ function selectionsort(&$Array, $n) {
     }
   }
   
-  // function to print array
-  function PrintArray($Array, $n) { 
-    for ($i = 0; $i < $n; $i++) 
-      echo $Array[$i]." ";
-    echo "\n"; 
-  }  
-  
-  // test the code
-//   $MyArray = array(1, 10, 23, 50, 4, 9, -4);
-//   $n = sizeof($MyArray); 
-//   echo "Original Array\n";
-//   PrintArray($MyArray, $n);
-  
-//   selectionsort($MyArray, $n);
-//   echo "\nSorted Array\n";
-//   PrintArray($MyArray, $n);
+ //source: alpha coding skills 
 
 $word=$_GET["word"];
 
 $array = [];
 
-for ($i=0; $i < strlen( $word); $i++) { 
+for ($i=0; $i < strlen($word); $i++) { 
    if ($word[$i]!==",") {
     array_push($array,$word[$i]);
    }
