@@ -8,13 +8,18 @@ function primeEven($birth){
         "prime" => "false"
     ];
     $age=$ourYear-$birth;
-     if($age%2==0){
+    if($age<0){
+        echo "wrong input";
+    }
+    else if($age==2){
             $response["even"] = "true";
+            for($i=2; $i<=$age; $i++){
+                if(($age % $i) == 0){
+                    $response ["prime"] = "true";
+                }}
         }
-     for($i=2; $i<=$age; $i++){
-        if(($age % $i) !== 0){
-            $response ["prime"] = "true";
-        }}
+   
+  
 
   echo json_encode($response);
 }
